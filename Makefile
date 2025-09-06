@@ -4,6 +4,7 @@ help:
 	@echo "lint                               -- lint backend"
 	@echo "format                             -- format backend"
 	@echo "mypy                               -- type check backend"
+	@echo "translate                          -- start translator server"
 	@echo "dev                                -- start backend development server"
 	@echo
 
@@ -18,12 +19,17 @@ lint:
 
 .PHONY: mypy
 mypy:
-	uv run mypy .
+	MYPY_PATH=./,translator_service uv run mypy .
 
 .PHONY: format
 format:
 	uv run ruff check --fix .
 	uv run ruff format .
+
+.PHONY: translate
+translate:
+	cd translator_service && uv run uvicorn main:app --reload --host "127.0.0.1" --port 8081 --workers 1 --log-level info
+
 
 .PHONY: dev
 dev:
