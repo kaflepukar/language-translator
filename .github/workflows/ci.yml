@@ -31,4 +31,4 @@ jobs:
         run: uv run ruff format --diff ./
 
       - name: Type check
-        run: MYPY_PATH./,translater_service uv run mypy ./
+        run: MYPY_PATH=./,translator_service uv run mypy ./
