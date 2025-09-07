@@ -179,7 +179,6 @@ dependencies = [
     { name = "pydantic-settings" },
     { name = "python-json-logger" },
     { name = "sqlalchemy" },
-
     { name = "translator-service" },
     { name = "uvicorn" },
 ]
