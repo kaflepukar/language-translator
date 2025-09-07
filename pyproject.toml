@@ -10,7 +10,11 @@ dependencies = [
     "pydantic-settings>=2.10.1",
     "python-json-logger>=3.3.0",
     "uvicorn>=0.35.0",
-    "translator-service"
+    "translator-service",
+    "alembic>=1.16.5",
+    "sqlalchemy>=2.0.43",
+    "asyncpg>=0.30.0",
+
 ]
 
 [tool.uv.sources]
