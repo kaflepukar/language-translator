@@ -34,5 +34,4 @@ translate:
 .PHONY: dev
 dev:
 	docker compose up -d
-	alembic upgrade head
 	uv run uvicorn main:app --reload --host "127.0.0.1" --port 8080 --workers 1 --log-level info
