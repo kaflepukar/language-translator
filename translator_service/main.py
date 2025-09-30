@@ -28,5 +28,5 @@ async def healthz():
 
 
 @app.post("/translate", tags=["Translate"])
-def create_embeddings(request: Request):
+def translate(request: Request):
     raise NotImplementedError
